@@ -93,8 +93,13 @@
         // performance, uncomment the following line:
         config.devicePixelRatio = 1;
         
+		if(window.innerWidth > window.innerHeight){
+        canvas.style.width = window.innerHeight * 960 / 720 + 'px';
+        canvas.style.height = window.innerHeight + 'px';
+        } else {
         canvas.style.width = window.innerWidth + 'px';
         canvas.style.height = window.innerWidth * 720 / 960 + 'px';
+        }
         
         unityShowBanner('読み込み中……');
       } else {
